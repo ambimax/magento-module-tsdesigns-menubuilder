@@ -1,0 +1,49 @@
+/**
+ * LICENSE.txt
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Licence that is bundled with 
+ * this package in the file LICENSE.txt. It is also available through 
+ * the world-wide-web at this URL: http://www.tsdesigns.de/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@tsdesigns.de so we can send you a copy immediately.
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * versions in the future. If you wish to customize Magento or this extension for your
+ * needs please refer to http://www.magentocommerce.com or http://www.tsdesigns.de
+ * for more information.
+ * 
+ *
+ * @category TSDesigns
+ * @package TSDesigns_MenuBuilder
+ * @author Tobias Schifftner, TSDesigns
+ * @license http://www.tsdesigns.de/license
+ * @copyright This software is protected by copyright, (c) 2011 TSDesigns.
+ * @version 1.6.0 - 2011-10-21 10:31:26
+ *
+ */
+
+# LICENCE AGREEMENT (English)
+
+This software is protected by law. You may not alter, transform, or build upon this work. 
+Reselling or redistribution in any way, shape, or form is not permitted. You may extend this software for personal 
+use only.  Every bought license grants you to install this software on one (1) productive magento installation and on one (1) 
+test system that you or your company owns. This license agreement is between only the LICENSEE and the LICENSOR. 
+The LICENSEE may not transfer the license to anyone else. The LICENSOR reserves all rights not expressly granted.
+
+
+
+# LIZENZVEREINBARUNG (Deutsch)
+
+Diese Software ist durch das Urheberrecht geschützt. Der Inhalt dieses Werkes oder das Werk an sich darf nicht
+bearbeitet, abgewandelt oder in anderer Weise verändert werden. Wiederverkauf oder Verteilung jeglicher Art, Ausprägung oder
+Form ist untersagt. Erweiterung der Software ist nur für persönliche Bedürfnisse des Lizenznehmers gestattet. 
+Je Kauf-Lizenz ist es gestattet die Software in einer (1) produktiven Magento-Installation und in einer (1) Test-Installation zu betreiben
+das Ihnen oder Ihrer Firma gehört. Die Lizenzvereinbarung besteht nur zwischen dem Lizenznehmer und dem Lizenzgeber. Der
+Lizenznehmer darf die Lizenzvereinbarung an keine dritten weitergeben. Der Lizenzgeber behält alle Rechte die nicht ausdrücklich 
+genehmigt wurden.

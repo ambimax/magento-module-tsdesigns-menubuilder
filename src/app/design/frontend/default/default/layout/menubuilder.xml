@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * app/design/frontend/default/default/layout/menubuilder.xml
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Licence that is bundled with 
+ * this package in the file LICENSE.txt. It is also available through 
+ * the world-wide-web at this URL: http://www.tsdesigns.de/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@tsdesigns.de so we can send you a copy immediately.
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * versions in the future. If you wish to customize Magento or this extension for your
+ * needs please refer to http://www.magentocommerce.com or http://www.tsdesigns.de
+ * for more information.
+ * 
+ *
+ * @category TSDesigns
+ * @package TSDesigns_MenuBuilder
+ * @author Tobias Schifftner, TSDesigns
+ * @license http://www.tsdesigns.de/license
+ * @copyright This software is protected by copyright, (c) 2011 TSDesigns.
+ * @version 1.6.0 - 2011-10-21 10:31:26
+ *
+ */
+-->
+<layout version="0.1.0">
+	<default>
+        <!-- reference name="top.menu">
+        	<block type="menubuilder/menu" name="first_menu" before="left.cart_sidebar">
+        		<action method="setMenuCode"><menu_code>first_menu</menu_code></action>
+        	</block>
+        </reference -->
+        <reference name="top.menu">
+			<action method="unsetChild" ifconfig="menubuilder/settings/hide_default_navigation">
+				<name>catalog.topnav</name>
+			</action>
+        </reference>        
+        <reference name="footer">
+			<remove name="footer_links" ifconfig="menubuilder/settings/hide_footer_links" /> 
+        </reference>
+        
+        
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/menubuilder.css</stylesheet></action>
+            <action method="addJs"><script>tsdesigns/menubuilder.js</script></action>
+        </reference>
+                
+		<reference name="top.menu">
+			<block type="menubuilder/collection" name="menubuilder.menu.top" before="-">
+				<action method="setBlockId">
+					<block_id>menu-top</block_id>
+				</action>
+			</block>
+			<block type="menubuilder/collection" name="menubuilder.menu.bottom">
+				<action method="setBlockId">
+					<block_id>menu-bottom</block_id>
+				</action>
+			</block>
+		</reference>
+		<reference name="content">
+			<block type="menubuilder/collection" name="menubuilder.content.top" before="-">
+				<action method="setBlockId">
+					<block_id>content-top</block_id>
+				</action>
+			</block>
+		</reference>
+		<reference name="right">
+			<block type="menubuilder/collection" name="menubuilder.sidebar.right.top"
+				before="-">
+				<action method="setBlockId">
+					<block_id>sidebar-right-top</block_id>
+				</action>
+			</block>
+			<block type="menubuilder/collection" name="menubuilder.sidebar.right.bottom">
+				<action method="setBlockId">
+					<block_id>sidebar-right-bottom</block_id>
+				</action>
+			</block>
+		</reference>
+		<reference name="left">
+			<block type="menubuilder/collection" name="menubuilder.sidebar.left.top" before="-">
+				<action method="setBlockId">
+					<block_id>sidebar-left-top</block_id>
+				</action>
+			</block>
+			<block type="menubuilder/collection" name="menubuilder.sidebar.left.bottom">
+				<action method="setBlockId">
+					<block_id>sidebar-left-bottom</block_id>
+				</action>
+			</block>
+		</reference>
+		<reference name="footer">
+			<block type="menubuilder/collection" name="menubuilder.footer.top" before="-">
+				<action method="setBlockId">
+					<block_id>footer-top</block_id>
+				</action>
+			</block>
+			<block type="menubuilder/collection" name="menubuilder.footer.bottom">
+				<action method="setBlockId">
+					<block_id>footer-bottom</block_id>
+				</action>
+			</block>
+		</reference>
+		<reference name="before_body_end">
+			<block type="menubuilder/collection" name="menubuilder.page.bottom">
+				<action method="setBlockId">
+					<block_id>page-bottom</block_id>
+				</action>
+			</block>
+		</reference>
+	</default>
+</layout>

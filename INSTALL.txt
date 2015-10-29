@@ -1,0 +1,67 @@
+/**
+ * INSTALL.txt
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Licence that is bundled with 
+ * this package in the file LICENSE.txt. It is also available through 
+ * the world-wide-web at this URL: http://www.tsdesigns.de/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@tsdesigns.de so we can send you a copy immediately.
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * versions in the future. If you wish to customize Magento or this extension for your
+ * needs please refer to http://www.magentocommerce.com or http://www.tsdesigns.de
+ * for more information.
+ * 
+ *
+ * @category TSDesigns
+ * @package TSDesigns_MenuBuilder
+ * @author Tobias Schifftner, TSDesigns
+ * @license http://www.tsdesigns.de/license
+ * @copyright This software is protected by copyright, (c) 2011 TSDesigns.
+ * @version 1.6.0 - 2011-10-21 10:31:26
+ *
+ */
+
+
+# INSTALLATION (English)
+
+1) Please backup your Magento installation.
+
+2) Unzip the file TSDesigns_MenuBuilder.zip.
+
+3) Copy all files into you magento installation folder (magento/)
+
+4) Check file permissions (Folders 655, Files 755)
+
+5) Log into the admin panel and delete your cache
+
+6) All neccessary files will be installed. Close the admin panel and log in again.
+
+7) Go to System » Configuration. On the left side you will see a new tab called "TSDesigns". Click below this tab on "Info". 
+   If this Extensions is displayed the installation was successful.
+
+
+
+# INSTALLATION (Deutsch)
+
+1) Sichern Sie Ihre Magento Installation
+
+2) Entpacken Sie die Datei TSDesigns_MenuBuilder.zip.
+
+3) Kopieren Sie alle Ordner in den Magento-Ordner (magento/) auf Ihrem Server.
+
+4) Überprüfen Sie die Dateirechte (Order 655, Dateien 755).
+
+5) Melden Sie sich im Magento Administrationspanel an und löschen Sie den Cache.
+
+6) Die benötigten Dateien wurden installiert. Schließen Sie das Adminpanel und öffnen Sie es erneut.
+
+7) Rufen Sie nun die Konfiguration auf unter System » Konfiguration. In der linken Leiste sehen Sie nun einen
+   neuen Menu-Tab namens "TSDesigns". Klicken Sie unterhalb des Menu-Tabs auf den Link "Info".
+   Ist die Extension unter den aufgeführten Modulen ist die Installation erfolgreich beendet.

@@ -1,0 +1,40 @@
+/**
+ * skin/adminhtml/default/default/menubuilder.css
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Licence that is bundled with 
+ * this package in the file LICENSE.txt. It is also available through 
+ * the world-wide-web at this URL: http://www.tsdesigns.de/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@tsdesigns.de so we can send you a copy immediately.
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * versions in the future. If you wish to customize Magento or this extension for your
+ * needs please refer to http://www.magentocommerce.com or http://www.tsdesigns.de
+ * for more information.
+ * 
+ *
+ * @category TSDesigns
+ * @package TSDesigns_MenuBuilder
+ * @author Tobias Schifftner, TSDesigns
+ * @license http://www.tsdesigns.de/license
+ * @copyright This software is protected by copyright, (c) 2011 TSDesigns.
+ * @version 1.6.0 - 2011-10-21 10:31:26
+ *
+ */
+
+.tree-node-root 			{ background-image:url(images/menubuilder/root.png) !important; }
+.tree-node-nowhere	 		{ background-image:url(images/menubuilder/nowhere.png) !important; }
+.tree-node-product 			{ background-image:url(images/menubuilder/product.png) !important; }
+.tree-node-external 		{ background-image:url(images/menubuilder/external.png) !important; }
+.tree-node-internal 		{ background-image:url(images/menubuilder/internal.png) !important; }
+.tree-node-category 		{ background-image:url(images/menubuilder/category.png) !important; }
+.tree-node-cms_page,
+.tree-node-cms-page 		{ background-image:url(images/menubuilder/cms-page.png) !important; }
+
+.icon-pipette { background: transparent url('images/menubuilder/icon_pipette.gif') top left no-repeat; }

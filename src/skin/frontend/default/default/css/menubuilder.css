@@ -1,0 +1,213 @@
+/**
+ * skin/frontend/default/default/css/menubuilder.css
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Licence that is bundled with 
+ * this package in the file LICENSE.txt. It is also available through 
+ * the world-wide-web at this URL: http://www.tsdesigns.de/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@tsdesigns.de so we can send you a copy immediately.
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * versions in the future. If you wish to customize Magento or this extension for your
+ * needs please refer to http://www.magentocommerce.com or http://www.tsdesigns.de
+ * for more information.
+ * 
+ *
+ * @category TSDesigns
+ * @package TSDesigns_MenuBuilder
+ * @author Tobias Schifftner, TSDesigns
+ * @license http://www.tsdesigns.de/license
+ * @copyright This software is protected by copyright, (c) 2011 TSDesigns.
+ * @version 1.6.0 - 2011-10-21 10:31:26
+ *
+ */
+/*
+ * This CSS is based on the original code of magento
+ */
+
+/******** Horizontal Menu *********/
+
+ul.nav-horizontal { 
+	padding:0 20px; font-size:1.1em; z-index:999; border:none;
+	width:918px; margin:0 auto; padding:0 16px; font-size:13px; /* For default template */
+}
+
+/************** ALL LEVELS  *************/ 
+/* Style consistent throughout all nav levels */
+ul.nav-horizontal li { list-style:none;  position:relative; text-align:left; }
+ul.nav-horizontal li.over { z-index:999; }
+ul.nav-horizontal a,
+ul.nav-horizontal a:hover { display:block; line-height:1.3em; text-decoration:none; }
+ul.nav-horizontal span { display:block; cursor:pointer; white-space:nowrap; padding:3px 15px; }
+ul.nav-horizontal li ul span {white-space:normal; }
+
+ul.nav-horizontal li.level0.parent span { padding:3px 15px 3px 3px; }
+ul.nav-horizontal li li span.parent { background: url('../images/menubuilder/i_nav-parent.gif') 100% 100% no-repeat; }
+ul.nav-horizontal li.level0.parent a.level0 { background: url('../images/menubuilder/nav_link_bg.gif') 92% 50% no-repeat; }
+
+ul.nav-horizontal li img.image { float:left; position:relative; top:5px; left:9px; }
+
+
+/************ 0 LEVEL  ***************/
+ul.nav-horizontal li { float:left; margin:0; padding-bottom:0px; border-bottom:0px dotted #A0B3C3; /*background-color:#ecf3f6;*/ }
+ul.nav-horizontal li.active a { color:#d96708; }
+ul.nav-horizontal a { float:left; padding:5px 12px 6px 8px; color:#a7c6dd; font-weight:bold; }
+ul.nav-horizontal li.over a,
+ul.nav-horizontal a:hover { color:#d96708; }
+
+ul.nav-horizontal li.active { margin:0; padding-bottom:0px; border-bottom:0px dotted #A0B3C3; background-color:#ecf3f6; /*background:#ecf3f6 url(../images/nav_divider.gif) repeat-x 0 100%;*/ }
+ul.nav-horizontal li.over { border-bottom:0px dotted #A0B3C3; background-color:#d5e4eb; /*background:#d5e4eb url(../images/nav_divider.gif) repeat-x 0 100%;*/ }
+ul.nav-horizontal li.last { /*background:#ecf3f6;*/ border-bottom:none; }
+
+ul.nav-horizontal ul { margin-top:8px; }
+
+
+/************ 1ST LEVEL ************/
+ul.nav-horizontal ul li,
+ul.nav-horizontal ul li.active { float:none; margin:0; padding-bottom:0px; border-bottom:1px dotted #A0B3C3; background-color:#ecf3f6; }
+ul.nav-horizontal ul li.over { border-bottom:1px dotted #A0B3C3; background-color:#d5e4eb;  }
+ul.nav-horizontal ul li.last { background:#ecf3f6; padding-bottom:0; }
+
+ul.nav-horizontal ul li.last,
+ul.nav-horizontal ul li.over.last { border-bottom:0; }
+ul.nav-horizontal ul a,
+ul.nav-horizontal ul a:hover { float:none; padding:0; }
+ul.nav-horizontal ul li a { font-weight:normal !important; }
+
+
+/************ 2ND LEVEL ************/
+ul.nav-horizontal ul { background-color:#ecf3f6; position:absolute; width:15em; top:25px; left:-10000px; border:1px solid #899ba5; }
+
+/* Show menu */
+ul.nav-horizontal li.over > ul { left:0; }
+ul.nav-horizontal li.over > ul li.over > ul { left:100px; }
+ul.nav-horizontal li.over ul ul { left:-10000px; }
+
+ul.nav-horizontal li.active,
+ul.nav-horizontal li.over,
+ul.nav-horizontal li:hover { background:#d5e4eb; }
+
+ul.nav-horizontal ul li a { background:#ecf3f6; }
+ul.nav-horizontal ul li a:hover { background:#d5e4eb; }
+ul.nav-horizontal ul li a,
+ul.nav-horizontal ul li a:hover { color:#2f2f2f !important; }
+ul.nav-horizontal ul span, 
+ul.nav-horizontal ul li.last li span { padding:3px 15px 4px 15px;}
+
+/*
+ul.nav-horizontal li li.parent a { background: url('../images/menubuilder/i_nav-parent.gif') 100% 100% no-repeat; }
+*/
+
+/************ 3RD+ LEVEL ************/
+ul.nav-horizontal ul ul { top:5px; }
+
+/* IE FIX Menu Show */
+* html ul.nav-horizontal li.over > ul { left:0; top:30px; }
+ul.nav-horizontal li.over ul.shown-sub { left:0; }
+ul.nav-horizontal li.over li ul.shown-sub { left:100px; }
+
+* html ul.nav-horizontal ul li,
+* html ul.nav-horizontal ul a,
+* html ul.nav-horizontal ul span { height: 18px; }
+
+* html ul.nav-horizontal ul li.parent { border-bottom: 1px dotted #899ba5; }
+* html ul.nav-horizontal ul li.last { border-bottom: 0; }
+
+ul.nav-horizontal li a span.icon { margin-left: 30px; border:0px solid red; }
+
+/*** Fix IE6 **/
+* html ul.nav-horizontal li a span.icon { padding-left: 5px; }
+
+
+/************** VERTICAL MENU  *************/ 
+ul.nav-vertical { float:left; width:195px; margin:0; padding:0; font-size:1.05em; z-index:999; width:15em;  } 
+
+
+/************** ALL LEVELS  *************/ 
+/* Style consistent throughout all nav levels */
+ul.nav-vertical li { float:left; list-style:none; position:relative; left:0; top:0; text-align:left;  }
+ul.nav-vertical li.over { z-index:999; }
+ul.nav-vertical a,
+ul.nav-vertical a:hover { width:192px; display:block; line-height:1.3em; text-decoration:none; }
+ul.nav-vertical span { display:block; cursor:pointer; white-space:nowrap; padding-top: 2px; }
+ul.nav-vertical li ul span { white-space:normal; }
+
+ul.nav-vertical span.parent { background: url('../images/menubuilder/i_nav-parent.gif') 100% 100% no-repeat; }
+
+ul.nav-vertical li img.image { float:left; position:relative; top:5px; left:9px; }
+ul.nav-vertical li img.image.level0 { float:left; position:relative; top:8px; left:9px; }
+
+/************ 0 LEVEL  ***************/ 
+ul.nav-vertical li { float:left; margin:0; padding-bottom:0px; border-bottom:1px dotted #A0B3C3; background-color:#ecf3f6; }
+ul.nav-vertical li a { float:left; padding:0; color:#006699; font-weight:bold; }
+ul.nav-vertical li a span { padding:5px 12px 6px 8px;  }
+ul.nav-vertical li a span.level0 { padding:8px 12px 9px 8px;  }
+ul.nav-vertical li.over a,
+ul.nav-vertical li.active a,
+ul.nav-vertical a:hover { color:#d96708; }
+
+ul.nav-vertical li.active,
+ul.nav-vertical li.over { border-bottom:1px dotted #A0B3C3; background-color:#d5e4eb; }
+ul.nav-vertical li.last { background:#ecf3f6; padding-bottom:0; border-bottom:none; }
+
+
+/************ 1ST LEVEL ************
+ul.nav-vertical ul li { float:left; margin:0; padding-bottom:0px; border-bottom:1px dotted #A0B3C3; background-color:#ecf3f6; }
+*/
+ul.nav-vertical ul a,
+ul.nav-vertical ul a:hover { margin:0; width:192px; float:none; padding:0; background:none; }
+ul.nav-vertical ul li a { font-weight:normal !important; }
+
+/************ 2ND LEVEL ************/
+ul.nav-vertical ul { background-color:#ecf3f6; position:absolute; width:192px; top:15px; left:-10000px; border:1px solid #899ba5; }
+
+/* Show menu */
+ul.nav-vertical li.over > ul { left:125px; }
+ul.nav-vertical li.over > ul li.over > ul { left:100px; }
+ul.nav-vertical li.over ul ul { left:-10000px; }
+
+ul.nav-vertical li a { background-color:#ecf3f6; }
+ul.nav-vertical li a.active,
+ul.nav-vertical li a:hover { background-color:#d5e4eb; }
+ul.nav-vertical li a,
+ul.nav-vertical li a:hover { color:#2f2f2f !important; }
+ul.nav-vertical span, 
+ul.nav-vertical li.last li span { padding:3px 15px 4px 15px; }
+
+/************ 3RD+ LEVEL ************
+ul.nav-vertical ul ul { top:5px; }
+ul.nav-vertical li li li.parent a { background: url('../images/menubuilder/i_nav-parent.gif') 100% 100% no-repeat; }
+ul.nav-vertical li li li.parent li a { background-image:none; }
+
+ul.nav-vertical ul ul li a:hover { background:#d5e4eb; }
+ul.nav-vertical ul ul li a:hover { color:#2f2f2f !important; }
+*/
+
+
+/* IE FIX Menu Show */
+ul.nav-vertical li.over ul.shown-sub { left:125px; }
+ul.nav-vertical li.over li ul.shown-sub { left:100px; }
+
+ul.nav-vertical li a span.icon { margin-left: 30px; border:0px solid red; }
+
+/*** Fix IE6 **/
+ul.nav-vertical li a span.icon { padding-left: 5px; }
+
+
+/************** LINK LIST  *************/
+div.nav-link-list img { position:relative; top:4px; }
+
+
+/* Example */
+.mini-menubuilder-menu:after { content:"."; display:block; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+.mini-menubuilder-menu { padding:0; }
+.mini-menubuilder-menu .head { }
+.mini-menubuilder-menu .content { padding:0; margin:0; width:90%; }
+
+.col3-layout .home-spot { margin-left:0; }

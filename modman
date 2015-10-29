@@ -1,0 +1,17 @@
+src/app/code/community/TSDesigns/MenuBuilder                    app/code/community/TSDesigns/MenuBuilder
+src/app/design/adminhtml/default/default/layout/menubuilder.xml app/design/adminhtml/default/default/layout/menubuilder.xml
+src/app/design/adminhtml/default/default/template/menubuilder   app/design/adminhtml/default/default/template/menubuilder
+src/app/design/frontend/base/default/layout/menubuilder.xml     app/design/frontend/base/default/layout/menubuilder.xml
+src/app/design/frontend/base/default/template/menubuilder       app/design/frontend/base/default/template/menubuilder
+src/app/design/frontend/default/default/layout/menubuilder.xml  app/design/frontend/default/default/layout/menubuilder.xml
+src/app/design/frontend/default/default/template/menubuilder    app/design/frontend/default/default/template/menubuilder
+src/app/etc/modules/TSDesigns_MenuBuilder.xml                   app/etc/modules/TSDesigns_MenuBuilder.xml
+src/app/locale/de_DE/TSDesigns_MenuBuilder.csv                  app/locale/de_DE/TSDesigns_MenuBuilder.csv
+src/js/colorpicker                                              js/colorpicker
+src/js/tsdesigns                                                js/tsdesigns
+src/skin/adminhtml/default/default/images/menubuilder           skin/adminhtml/default/default/images/menubuilder
+src/skin/adminhtml/default/default/menubuilder.css              skin/adminhtml/default/default/menubuilder.css
+src/skin/frontend/base/default/css/menubuilder.css              skin/frontend/base/default/css/menubuilder.css
+src/skin/frontend/base/default/images/menubuilder               skin/frontend/base/default/images/menubuilder
+src/skin/frontend/default/default/css/menubuilder.css           skin/frontend/default/default/css/menubuilder.css
+src/skin/frontend/default/default/images/menubuilder            skin/frontend/default/default/images/menubuilder
