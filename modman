@@ -8,7 +8,8 @@ src/app/design/frontend/default/default/template/menubuilder    app/design/front
 src/app/etc/modules/TSDesigns_MenuBuilder.xml                   app/etc/modules/TSDesigns_MenuBuilder.xml
 src/app/locale/de_DE/TSDesigns_MenuBuilder.csv                  app/locale/de_DE/TSDesigns_MenuBuilder.csv
 src/js/colorpicker                                              js/colorpicker
-src/js/tsdesigns                                                js/tsdesigns
+src/js/tsdesigns/blank.html                                     js/tsdesigns/blank.html
+src/js/tsdesigns/menubuilder.js                                 js/tsdesigns/menubuilder.js
 src/skin/adminhtml/default/default/images/menubuilder           skin/adminhtml/default/default/images/menubuilder
 src/skin/adminhtml/default/default/menubuilder.css              skin/adminhtml/default/default/menubuilder.css
 src/skin/frontend/base/default/css/menubuilder.css              skin/frontend/base/default/css/menubuilder.css

@@ -74,7 +74,6 @@ class TSDesigns_MenuBuilder_Adminhtml_MenuController extends Mage_Adminhtml_Cont
     {
     	$this->_forward('edit');
     }
-    
 
     /**
      * Add new category form

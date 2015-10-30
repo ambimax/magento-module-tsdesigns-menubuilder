@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * app/code/community/TSDesigns/MenuBuilder/etc/adminhtml.xml
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Licence that is bundled with 
+ * this package in the file LICENSE.txt. It is also available through 
+ * the world-wide-web at this URL: http://www.tsdesigns.de/license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@tsdesigns.de so we can send you a copy immediately.
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * versions in the future. If you wish to customize Magento or this extension for your
+ * needs please refer to http://www.magentocommerce.com or http://www.tsdesigns.de
+ * for more information.
+ * 
+ *
+ * @category TSDesigns
+ * @package TSDesigns_MenuBuilder
+ * @author Tobias Schifftner, TSDesigns
+ * @license http://www.tsdesigns.de/license
+ * @copyright This software is protected by copyright, (c) 2011 TSDesigns.
+ * @version 1.6.0 - 2011-10-21 10:31:26
+ *
+ */
+-->
+<config>
+        <menu>
+            <catalog>
+                <children>
+                    <menubuilder translate="title" module="menubuilder">
+                        <title>Menu Builder</title>
+                        <action>adminhtml/menu/edit</action>
+                        <sort_order>1</sort_order>
+                    </menubuilder>
+                </children>
+            </catalog>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <catalog>
+                            <children>
+                                <menubuilder translate="title">
+                                    <title>TSDesigns MenuBuilder</title>
+                                </menubuilder>
+                            </children>
+                        </catalog>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <menubuilder translate="title" module="menubuilder">
+                                            <title>TSDesigns MenuBuilder</title>
+                                            <sort_order>50</sort_order>
+                                        </menubuilder>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+</config>

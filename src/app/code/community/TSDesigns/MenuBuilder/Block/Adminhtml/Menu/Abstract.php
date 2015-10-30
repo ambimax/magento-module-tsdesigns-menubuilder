@@ -168,7 +168,7 @@ class TSDesigns_MenuBuilder_Block_Adminhtml_Menu_Abstract extends Mage_Adminhtml
 
     public function getEditUrl()
     {
-        return $this->getUrl("*/adminhtml_menu/edit", array('_current'=>true, 'store'=>null, '_query'=>false, 'id'=>null, 'parent'=>null));
+        return $this->getUrl("*/menu/edit", array('_current'=>true, 'store'=>null, '_query'=>false, 'id'=>null, 'parent'=>null));
     }
 
     /**

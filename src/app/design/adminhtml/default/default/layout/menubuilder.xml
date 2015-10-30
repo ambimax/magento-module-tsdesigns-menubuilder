@@ -38,7 +38,7 @@
 	        <action method="addItem"><type>js_css</type><name>colorpicker/colorPicker.css</name></action>
 	    </reference>
     </default>
-    <menubuilder_adminhtml_menu_index>
+    <adminhtml_menu_index>
         <reference name="content">
             <block type="menubuilder/adminhtml_menu" name="menu_list">
                 <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
@@ -46,9 +46,9 @@
                 </block>
             </block>
         </reference>
-    </menubuilder_adminhtml_menu_index>
+    </adminhtml_menu_index>
 
-    <menubuilder_adminhtml_menu_edit>
+    <adminhtml_menu_edit>
     	<reference name="head">
     		<action method="addCss"><name>menubuilder.css</name></action>
     	</reference>	
@@ -58,6 +58,6 @@
         <reference name="content">
             <block name="menu.edit"  type="menubuilder/adminhtml_menu_edit" template="menubuilder/menu/edit.phtml" />
         </reference>
-    </menubuilder_adminhtml_menu_edit>
+    </adminhtml_menu_edit>
 
 </layout>

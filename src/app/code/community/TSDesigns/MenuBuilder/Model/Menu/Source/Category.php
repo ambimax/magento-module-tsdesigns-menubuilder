@@ -32,14 +32,24 @@ class TSDesigns_MenuBuilder_Model_Menu_Source_Category extends Mage_Eav_Model_En
 {
 	protected $_options = array();
 
-    function getTreeCategories($parentId)
+    function getTreeCategories($parentId = null)
     {
-        $categoryCollection = Mage::getModel('catalog/category')->getCollection()
+        //$categoryCollection = Mage::getModel('catalog/category')->getCollection()
+        $categoryCollection = Mage::getResourceModel('menubuilder/category_collection')
             ->addAttributeToSelect('*')
-            ->addAttributeToFilter('is_active','1')
-            ->addAttributeToFilter('include_in_menu','1')
-            ->addAttributeToFilter('parent_id',array('eq' => $parentId))
+            //->addAttributeToFilter('is_active', 1)
+            //->addAttributeToFilter('include_in_menu', 1)
+            //->addAttributeToFilter('parent_id', 0)
+            //->addAttributeToFilter('parent_id',array('eq' => $parentId))
             ->addAttributeToSort('position', 'asc');
+
+        if(is_null($parentId)) {
+            // Root categories
+            $categoryCollection->addAttributeToFilter('level', 0);
+        } else {
+            $categoryCollection
+                ->addAttributeToFilter('parent_id',array('eq' => $parentId));
+        }
 
         foreach($categoryCollection as $node) {
             if('' != $node->getName() && $node->getLevel()) {
@@ -58,7 +68,7 @@ class TSDesigns_MenuBuilder_Model_Menu_Source_Category extends Mage_Eav_Model_En
     public function toOptionArray($addEmpty = true)
     {
         if( ! count($this->_options)) {
-            $this->getTreeCategories(Mage::app()->getStore()->getRootCategoryId());
+            $this->getTreeCategories();
             $this->_options = $this->_formatArray($this->_options);
         }
         return $this->_options;
@@ -84,7 +94,7 @@ class TSDesigns_MenuBuilder_Model_Menu_Source_Category extends Mage_Eav_Model_En
     protected function _formatArray($options)
     {
         $array = array(array(
-        	'label' => Mage::helper('menubuilder')->__('Please select a category'), 
+        	'label' => Mage::helper('menubuilder')->__('Please select a category'),
         	'value' => null
         ));
 
