@@ -39,3 +39,19 @@ This Extension is for Magento Commerce (site:magentocommerce.com) only and can o
 Depending on your type of license the features of the product vary. There is a Single-Store and a Multi-Store version.
 With the Multi-Store version you can define your settings by website or store, in Single-Store version this is not
 possible. Every license permits the use in one magento installation and in one test installation of magento only.
+
+# What company is behind the extension - TSDesigns or ambimax® GmbH?
+Published by TSDesigns the extension is and will be developed and supported by ambimax® GmbH. To get support you can
+go to www.tsdesigns.de or directly to www.ambimax.de
+
+# Magento 2
+Magento 2 will be supported. The new package will be release by a different extension name. Please send us an email
+to magento2(at)ambimax.de if you are interested in buying the new and completely rewritten version.
+
+# Authors
+ - Tobias Schifftner, ambimax® GmbH
+
+# Copyright
+```
+ © 2015 ambimax® GmbH. All rights reserved.
+```

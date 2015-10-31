@@ -43,7 +43,7 @@
 
 6) All neccessary files will be installed. Close the admin panel and log in again.
 
-7) Go to System » Configuration. On the left side you will see a new tab called "TSDesigns". Click below this tab on "Info". 
+7) Go to System > Configuration. On the left side you will see a new tab called "TSDesigns". Click below this tab on "Info".
    If this Extensions is displayed the installation was successful.
 
 
@@ -56,12 +56,12 @@
 
 3) Kopieren Sie alle Ordner in den Magento-Ordner (magento/) auf Ihrem Server.
 
-4) Überprüfen Sie die Dateirechte (Order 655, Dateien 755).
+4) ÃœberprÃ¼fen Sie die Dateirechte (Order 655, Dateien 755).
 
-5) Melden Sie sich im Magento Administrationspanel an und löschen Sie den Cache.
+5) Melden Sie sich im Magento Administrationspanel an und lÃ¶schen Sie den Cache.
 
-6) Die benötigten Dateien wurden installiert. Schließen Sie das Adminpanel und öffnen Sie es erneut.
+6) Die benÃ¶tigten Dateien wurden installiert. SchlieÃŸen Sie das Adminpanel und Ã¶ffnen Sie es erneut.
 
-7) Rufen Sie nun die Konfiguration auf unter System » Konfiguration. In der linken Leiste sehen Sie nun einen
+7) Rufen Sie nun die Konfiguration auf unter System > Konfiguration. In der linken Leiste sehen Sie nun einen
    neuen Menu-Tab namens "TSDesigns". Klicken Sie unterhalb des Menu-Tabs auf den Link "Info".
-   Ist die Extension unter den aufgeführten Modulen ist die Installation erfolgreich beendet.
+   Ist die Extension unter den aufgefÃ¼hrten Modulen ist die Installation erfolgreich beendet.

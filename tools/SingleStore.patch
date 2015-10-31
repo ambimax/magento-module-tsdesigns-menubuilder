@@ -1,0 +1,17 @@
+*** src/app/code/community/TSDesigns/MenuBuilder/Block/Adminhtml/Menu/Edit/Tree.php	2015-10-31 14:43:50.514632290 +0100
+--- src/app/code/community/TSDesigns/MenuBuilder/Block/Adminhtml/Menu/Edit/Tree.php	2015-10-31 14:55:11.236951930 +0100
+***************
+*** 69,80 ****
+              );
+          }
+          
+-         $this->setChild('store_switcher',
+-             $this->getLayout()->createBlock('adminhtml/store_switcher')
+-                 ->setSwitchUrl($this->getUrl('*/*/*', array('_current'=>true, '_query'=>false, 'store'=>null)))
+-                 ->setTemplate('store/switcher/enhanced.phtml')
+-         );
+-         
+          return parent::_prepareLayout();
+      }
+  
+--- 69,74 ----
