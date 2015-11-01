@@ -4,15 +4,8 @@
   "description": "",
   "homepage": "http://ambimax.de",
   "require": {
-    "ambimax/base": "2.1.0",
     "magento-hackathon/magento-composer-installer": "*"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@bitbucket.org:magecode/base.git"
-    }
-  ],
   "authors":[
     {
       "name":"Tobias Schifftner",
