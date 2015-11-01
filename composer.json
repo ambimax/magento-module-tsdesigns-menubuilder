@@ -4,8 +4,15 @@
   "description": "",
   "homepage": "http://ambimax.de",
   "require": {
+    "ambimax/base": "*",
     "magento-hackathon/magento-composer-installer": "*"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://bitbucket.org/magecode/base.git"
+    }
+  ],
   "authors":[
     {
       "name":"Tobias Schifftner",
