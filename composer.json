@@ -10,7 +10,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://bitbucket.org/magecode/base.git"
+      "url": "git@bitbucket.org:magecode/base.git"
     }
   ],
   "authors":[
