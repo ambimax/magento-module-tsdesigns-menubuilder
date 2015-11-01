@@ -5,8 +5,12 @@ PACKAGE_ROOT="$(dirname "$(dirname "$0")")"
 MODULE_ROOT="$PACKAGE_ROOT/src"
 TOOLS_PATH=$PACKAGE_ROOT/tools
 BUILD_PATH=$PACKAGE_ROOT/build
-SINGLESTORE_TMP=$BUILD_PATH/singlestore
-MULTISTORE_TMP=$BUILD_PATH/multistore
+BASE_MODULE_ROOT="$(dirname "$PACKAGE_ROOT")/base"
+
+if [ ! -d $BASE_MODULE_ROOT ]; then
+    echo "Base module not found in $BASE_MODULE_ROOT"
+    exit
+fi
 
 # change working directory
 cd $PACKAGE_ROOT
@@ -38,15 +42,25 @@ function build_package {
     PATH=$BUILD_PATH/$NAME
 
     echo ""
-    echo "   Building $NAME Version"
+    echo "###   Building $NAME Version   ###"
+    echo "   in $PATH"
 
     if [ -d $PATH ]; then
         $RM -rf $PATH
     fi
 
-    # create directory and copy all files to it
+    # create build directory
     $CREATEDIR -p $PATH;
+
+    # copy base package to build directory
+    $COPY -rf $BASE_MODULE_ROOT/src $PATH
+    $COPY -rf $BASE_MODULE_ROOT/readme.md $PATH/readme-base.md
+
+    # copy menubuilder package to build directory
     $COPY -rf $PACKAGE_ROOT/{doc,src,composer.json,modman,*.txt,*.md} $PATH
+
+    # add base modman entries to menubuilder modman file
+    $CAT $BASE_MODULE_ROOT/modman >> $PATH/modman
 
     # retrieve version of config.xml
     VERSION=`$GREP -oPm1 "(?<=<version>)[^<]+" $PATH/src/app/code/community/TSDesigns/MenuBuilder/etc/config.xml`
@@ -84,9 +98,7 @@ echo "   Package Root:      $PACKAGE_ROOT"
 echo "   Module Root:       $MODULE_ROOT"
 echo "   Build Path:        $BUILD_PATH"
 echo "   Tools Path:        $TOOLS_PATH"
-echo "   SingleStore Tmp:   $SINGLESTORE_TMP"
-echo "   MultiStore Tmp:    $MULTISTORE_TMP"
 echo "   "
 
-build_package SingleStore $SINGLESTORE_TMP
-build_package MultiStore $MULTISTORE_TMP
+build_package SingleStore
+build_package MultiStore
