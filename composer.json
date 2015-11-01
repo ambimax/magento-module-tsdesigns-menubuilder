@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "http://ambimax.de",
   "require": {
-    "ambimax/base": "dev-master",
+    "ambimax/base": "*",
     "magento-hackathon/magento-composer-installer": "*"
   },
   "repositories": [
