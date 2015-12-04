@@ -139,12 +139,12 @@ class TSDesigns_MenuBuilder_Block_Adminhtml_Menu_Edit_Tree
 
     public function getNodesUrl()
     {
-        return $this->getUrl('*/adminhtml_menu/jsonTree');
+        return $this->getUrl('*/menu/jsonTree');
     }
 
     public function getSwitchTreeUrl()
     {
-        return $this->getUrl("*/adminhtml_menu/tree", array('_current'=>true, 'store'=>null, '_query'=>false, 'id'=>null, 'parent'=>null));
+        return $this->getUrl("*/menu/tree", array('_current'=>true, 'store'=>null, '_query'=>false, 'id'=>null, 'parent'=>null));
     }
 
     public function getIsWasExpanded()
@@ -154,7 +154,7 @@ class TSDesigns_MenuBuilder_Block_Adminhtml_Menu_Edit_Tree
 
     public function getMoveUrl()
     {
-        return $this->getUrl('*/adminhtml_menu/move', array('store'=>$this->getRequest()->getParam('store')));
+        return $this->getUrl('*/menu/move', array('store'=>$this->getRequest()->getParam('store')));
     }
 
     public function getTree($parentNodeCategory=null)

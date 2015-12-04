@@ -33,7 +33,7 @@
 <config>
 	<modules>
 		<TSDesigns_MenuBuilder>
-			<version>1.9.2</version>
+			<version>1.9.3</version>
 		</TSDesigns_MenuBuilder>
 	</modules>
 	<global>
