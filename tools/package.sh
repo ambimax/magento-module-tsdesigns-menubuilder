@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-SCRIPTPATH=$0
-PACKAGE_ROOT="$(dirname "$(dirname "$0")")"
+SCRIPTPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PACKAGE_ROOT="$(dirname "$SCRIPTPATH")"
 MODULE_ROOT="$PACKAGE_ROOT/src"
 TOOLS_PATH=$PACKAGE_ROOT/tools
 BUILD_PATH=$PACKAGE_ROOT/build
