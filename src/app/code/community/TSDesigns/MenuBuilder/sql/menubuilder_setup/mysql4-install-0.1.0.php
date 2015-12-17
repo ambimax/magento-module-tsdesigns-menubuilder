@@ -136,17 +136,24 @@ $installer->startSetup();
 $entityTypeId     = $installer->getEntityTypeId('menubuilder');
 $attributeSetId   = $installer->getDefaultAttributeSetId($entityTypeId);
 
-$installer->run("
+$query = <<<EOT
 INSERT INTO {$this->getTable('menubuilder_entity')} 
 (`entity_id`, `menu_code`, `entity_type_id`, `attribute_set_id`, `parent_id`, `created_at`, `updated_at`, `path`, `position`, `level`, `children_count`) VALUES 
-(1, '', {$installer->getEntityTypeId('menubuilder')}, 0, 0, NOW(), NOW(), '1', 0, 0, 0),
-(2, 'default', {$installer->getEntityTypeId('menubuilder')}, {$attributeSetId}, 1, NOW(), NOW(), '1/2', 1, 1, 0);
-");
+(1, '', {$installer->getEntityTypeId('menubuilder')}, 0, 0, NOW(), NOW(), '1', 0, 0, 0);
+EOT;
+
+$installer->run($query);
 $installer->endSetup();
 
-$menu = Mage::getModel('menubuilder/menu')->setStoreId(0)->load(2);
-/* @var $category Mage_Catalog_Model_Category */
-$menu->setName('Default Menu')->save();
-$menu->setStoreId(1)
-    ->save();
+/** @var TSDesigns_MenuBuilder_Model_Menu $menubuilder */
+$menubuilder = Mage::getModel('menubuilder/menu');
 
+$menubuilder->setData(array(
+    'menu_code' => 'default',
+    'parent_id' => 0,
+    'path' => 1,
+    'name' => 'Default Menu',
+    'store_id' => 0,
+));
+
+$menubuilder->save();
